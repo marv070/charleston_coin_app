@@ -4,8 +4,8 @@ require_relative "Coin_Changer.rb"
 class TestCoinChanger < Minitest::Test
 
 	def test_0_cents_returns_empty_hash
-		cents_recieved = 0
-		assert_equal({}, change(cents_recieved))
+		cents_received = 0
+		assert_equal({}, change(cents_received))
 	end
 
 	# def test_1_cent_returns_penny
@@ -20,18 +20,17 @@ class TestCoinChanger < Minitest::Test
 	# end
 
 	def test_25_cents_returns_quarter
-		cents_recieved = 25
-		assert_equal({:quarter => 1}, change(cents_recieved))
+		cents_received = 25
+		assert_equal({:quarter => 1}, change(cents_received))
 	end
 	def test_75_cents_returns_3_quarters
-		cents_recieved = 75
-		assert_equal({:quarter => 3}, change(cents_recieved))
+		cents_received = 75
+		assert_equal({:half_dollar => 1, :quarter => 1}, change(cents_received))
 	end
 	def test_20_cents_returns_2_dimes
-		cents_recieved = 20
-		assert_equal({:dime => 2}, change(cents_recieved))
+		cents_received = 20
+		assert_equal({:dime => 2}, change(cents_received))
 	end
-
-
 end
+
 
