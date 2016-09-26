@@ -1,0 +1,7 @@
+Welcome back <%= name %>! Please enter your pin.
+
+<form method = "post" action = "/pin">
+	<input type = "number"  min = "1000", max = "9999" name = "pin">
+	<input type = "text" name = "retrieved_name" value = <%= name%> hidden>
+	<input type = "submit">
+</form>
