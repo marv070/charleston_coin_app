@@ -1,5 +1,6 @@
-require 'sinatra'
+require_relative 'Coin_changer.rb'
 
+require 'sinatra'
 
 get '/' do
 	erb :introduction
@@ -17,14 +18,23 @@ end
 
 
 post '/pin' do
-	age = params[:pin]
+	pin = params[:pin]
 	name = params[:retrieved_name]
-	redirect '/deposit?name=' + name +"&age=" + age
+	redirect '/deposit?name=' + name +"&pin=" + pin
 end
 
 get '/deposit' do
 	name = params[:name]
-	age = params[:age]
-	erb :deposit, :locals => {:name => name, :age => age}
+	pin = params[:pin]
+	erb :deposit, :locals => {:name => name, :pin => pin}
 end
+
+post '/deposit' do
+	pin = params[:pin]
+	name = params[:retrieved_name]
+	coins = Coin_changer(deposit.to_i)
+	"Thank you #{name}, you have deposited #{coins}"
+end
+
+
 
