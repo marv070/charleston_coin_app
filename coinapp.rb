@@ -32,7 +32,8 @@ end
 post '/deposit' do
 	pin = params[:pin]
 	name = params[:retrieved_name]
-	coins = Coin_Changer(deposit.to_i)
+	deposit = params[:deposit]
+	coins = change(deposit.to_i)
 	"Thank you #{name}, you have deposited #{coins}"
 end
 
