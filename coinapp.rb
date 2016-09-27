@@ -26,6 +26,7 @@ end
 get '/deposit' do
 	name = params[:name]
 	pin = params[:pin]
+	stuff = hashconverter(coins)
 	erb :deposit, :locals => {:name => name, :pin => pin}
 end
 

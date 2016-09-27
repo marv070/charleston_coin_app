@@ -30,5 +30,22 @@ def change(cents_received)
 	coins
 end
 
+def hashconverter(coins)
+	change = ""
+	coins.each do |cents_received, coins|
+		change << cents_received
+	end
+	change
+end
+
+
+	
+
+
+
+
+
+
+
 
 
