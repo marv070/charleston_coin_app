@@ -32,11 +32,12 @@ end
 
 def hashconverter(coins)
 	change = ""
-	coins.each do |cents_received, coins|
-		change << cents_received
+	coins.each do |key, value|
+		change << " " + value.to_s + " ," + key.to_s
 	end
 	change
 end
+
 
 
 	

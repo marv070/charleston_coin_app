@@ -26,7 +26,6 @@ end
 get '/deposit' do
 	name = params[:name]
 	pin = params[:pin]
-	stuff = hashconverter(coins)
 	erb :deposit, :locals => {:name => name, :pin => pin}
 end
 
@@ -35,8 +34,11 @@ post '/deposit' do
 	name = params[:retrieved_name]
 	deposit = params[:deposit]
 	coins = change(deposit.to_i)
-	"Thank you #{name}, you have deposited #{coins}"
+	stuff = hashconverter(coins)
+	"Thank you #{name}, you have deposited #{stuff}"
 end
 
 
 
+
+# [:silver_dollar]} silver dollars, #{coins[:half_dollar]} half dollars, #{coins[:quarter]} quarters, #{coins[:dime]} dimes, #{coins [:nickel]}, and #{coins [:penny]} pennies"
