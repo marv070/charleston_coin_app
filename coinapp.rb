@@ -19,12 +19,12 @@ end
 post '/pin' do
 	age = params[:pin]
 	name = params[:retrieved_name]
-	redirect '/fav_numbers?name=' + name +"&age=" + age
+	redirect '/deposit?name=' + name +"&age=" + age
 end
 
-# get '/fav_numbers' do
-# 	name = params[:name]
-# 	age = params[:age]
-# 	erb :favorite_numbers, :locals => {:name => name, :age => age}
-# end
+get '/deposit' do
+	name = params[:name]
+	age = params[:age]
+	erb :deposit, :locals => {:name => name, :age => age}
+end
 
