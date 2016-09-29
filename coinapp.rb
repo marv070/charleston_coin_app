@@ -21,9 +21,11 @@ post '/pin' do
 	pin = params[:pin]
 	name = params[:retrieved_name]
 	redirect '/deposit?name=' + name +"&pin=" + pin
+
 end
 
 get '/deposit' do
+	
 	name = params[:name]
 	pin = params[:pin]
 	erb :deposit, :locals => {:name => name, :pin => pin}
@@ -31,7 +33,8 @@ end
 
 post '/deposit' do
 	pin = params[:pin]
-	name = params[:retrieved_name]
+    name = params[:name]
+	
 	deposit = params[:deposit]
 	coins = change(deposit.to_i)
 	stuff = hashconverter(coins)
