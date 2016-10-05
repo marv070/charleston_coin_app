@@ -28,7 +28,7 @@ get '/deposit' do
 	
 	name = params[:name]
 	pin = params[:pin]
-	erb :deposit, :locals => {:name => name, :pin => pin}
+	erb :deposit, :locals => {:name => name, :pin => pin, :message1 => "Thank You #{name}. How much would you like to deposit today?"}
 end
 
 post '/deposit' do
@@ -38,9 +38,24 @@ post '/deposit' do
 	deposit = params[:deposit]
 	coins = change(deposit.to_i)
 	stuff = hashconverter(coins)
-	"Thank you #{name}, you have deposited #{stuff}"
+	# "Thank you #{name}, you have deposited #{stuff}"
+	erb :change_returned, :locals => {:name => name, :pin => pin, :message1 => "Thank you #{name}, you have deposited #{stuff}"}
 end
 
+get '/contact' do
+	@title = 'My British Contact Page'
+	erb :contact
+end
+
+get '/muffin' do
+	@title = 'Sweet Muffins'
+	erb :muffin
+end
+
+get '/rubbish' do
+	@title = 'Full of Rubbish'
+	erb :rubbish
+end
 
 
 

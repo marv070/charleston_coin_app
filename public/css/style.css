@@ -1,0 +1,44 @@
+li {
+	display: inline;
+	font-size: 3.0rem;
+	padding-right: 1.5rem;
+}
+li a {
+	color: #1d297b;
+}
+
+ul {
+
+	text-align: center;
+
+}
+
+footer {
+	text-align: center;
+	background-color: #1d297b;
+
+}
+footer p {
+	font-size: 2.0rem;
+	
+
+}
+footer a:visited {
+	color: white;
+}
+footer a:link{
+	color: white;
+}
+.jons {
+	height:25rem;
+	/*padding-left: */
+}
+.h4headline{
+	text-align: center;
+}
+.formbox{
+	text-align: center;
+}
+.somecolor {
+	color: orange;
+}
