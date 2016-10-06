@@ -2,9 +2,11 @@
 
 <!-- <body background = "https://www.dreamstime.com/royalty-free-stock-photography-bank-building-icon-image24113387"> -->
 
-<form class= "formbox" method = "post" action = "/name">
+<form name= "name_form" class= "formbox" onsubmit="return validateForm('name_form','user_name')" method = "post" action = "/name"> 
 	<input type = "text" name = "user_name">  
 	<input type = "submit">
 </form>
+<p id="error" class="h4headline"></p>
 <br>  <!-- we can add top margin to class instead of this break -->
 <center><img class= "jons" src= "/img/queen.jpeg"></center>
+

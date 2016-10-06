@@ -43,17 +43,17 @@ post '/deposit' do
 end
 
 get '/contact' do
-	@title = 'My British Contact Page'
+	
 	erb :contact
 end
 
 get '/muffin' do
-	@title = 'Sweet Muffins'
+	
 	erb :muffin
 end
 
 get '/rubbish' do
-	@title = 'Full of Rubbish'
+	
 	erb :rubbish
 end
 
